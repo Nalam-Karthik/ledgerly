@@ -1,0 +1,9 @@
+line-length = 125
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC"]
+ignore = ["B008"]  # FastAPI Depends() in defaults is idiomatic
+
+[lint.per-file-ignores]
+"migrations/versions/*" = ["E501"]
